@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/shameimaru-sans');
+@import url('https://fonts.cdnfonts.com/css/haghistydemo');
+@import url('https://fonts.cdnfonts.com/css/josefin-sans-std-3');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    &:after,
+    &:before{
+        box-sizing: border-box;
+    }
+}
+html, body{
+    overflow-x: hidden;
+    
+}
+body{
+    font-family: "Poppins" , sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing : antialiased;
+    height: 100vh;
+    background: #E2E8DD;
+}
+button,input,textarea,select{
+    font: inherit
+}
+p,h1,h2,h3,h4,h5,h6{
+    overflow-wrap: break-word;
+}
+img, video,canvas,svg{
+   // max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+/*-----Variables----*/
+$green-color: #6cff8d;
+$dark-green-color: #6cff8c7a;
+$red-color:#f44336;
+$blue-color:#2196f3;
+$darkish-blue:#060b11;
+$box-shadow-blue1: rgba(31, 38 , 135, 0.27 ); 
+$box-shadow-blue2: rgba(31, 38 , 135, 0.67 );
+
+/*----Predefined classes-----------------*/
+.section{
+    padding: 1rem;
+    overflow: hidden;
+    min-height: 100vh;
+    padding-top: 5rem;
+    @media (min-width:650px) {
+        padding: 5rem;
+    }
+    &__header {
+        &__title {
+            font-weight: 400;
+            font-size: 17px;
+            color: #666;
+        }
+        &__subtitle {
+            font-size: 27px;
+            font-weight: 700;
+        }
+    }
+}

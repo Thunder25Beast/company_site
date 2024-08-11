@@ -1,0 +1,186 @@
+.landing{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    color: #fff;
+    overflow: hidden;
+    //background: transparent;
+    //background-image: url(../images/shapes/3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .header{
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        &__wrap{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 60vw;
+            .logo{
+                border-radius: 20%;
+                width: 70px;
+                cursor: pointer;
+            }
+        }
+        &__left{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            & li{
+                font-size: 17px;
+                font-weight: 700;
+            }
+            
+        }
+        @media (max-width:1200px){
+            &__wrap{
+                width: 100vw;
+            }
+        }
+        @media (max-width:720px){
+            &__sm{
+                display:none
+            }
+        }
+        @media (max-width:370px){
+            & {
+                left: 50%;
+            }
+            &__wrap{
+                gap: 5%;
+            }
+            .coolLink[data-text="Home"]{
+                display: none;
+            }
+            }
+        }
+        .socials{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -100;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 2;
+        }
+        .scrollDown{
+            z-index: 1;
+            position: absolute;
+            bottom: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            &__wheel{
+                height: 42px;
+                width: 24px;
+                border-radius: 10px;
+                border: 2px solid #fff;
+                &__inner{
+                    position: absolute;
+                    left: 10px;
+                    margin-top: 5px;
+                    width: 4px;
+                    height: 4px;
+                    background: #fff;
+                    border-radius: 50%;
+                    animation: movingwheel 0.5s linear infinite;
+                    @keyframes movingwheel{
+                        0%{
+                            top: 1px;
+                        }
+                        25%{
+                            top: 2px;
+                        }
+                        50%{
+                            top: 3px;
+                        }
+                        75%{
+                            top: 2px;
+                        }
+                        100%{
+                            top: 1px;
+                        }
+                    }
+                }
+            }
+            .scrollDown__arrows{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .scrollDown__arrow{
+                    width: 15px;
+                    height: 15px;
+                    border-right: 2px solid #fff;
+                    border-bottom: 2px solid #fff;
+                    transform: rotate(45deg);
+                    animation: scrollAnim 1s infinite;
+                    animation-direction: alternate;
+                    &:nth-child(1){
+                        animation-delay: 0.1s;
+                    }
+                    &:nth-child(2){
+                        animation-delay: 0.2s;
+                    }
+                    &:nth-child(3){
+                        animation-delay: 0.3s;
+                    }
+                    @keyframes scrollAnim{
+                        0%{
+                            opacity: 0;
+                        }
+                        50%{
+                            opacity: 0.5;
+                        }
+                        100%{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .intro{
+            position: absolute;
+            top: 20%;
+            left: 1rem;
+            width: 100%;
+            height: 60%;
+            z-index: 2;
+            color: #fff;
+            font-family: 'Shameimaru Sans', sans-serif;
+            & h4{
+                font-size: 30px;
+            }
+            & h1{
+                font-size: 30px;
+                width: 93%;
+                padding-top: 0.1rem;
+            }
+            @media (max-width:653px) {
+                & h4{
+                    font-size: 25px;
+                }
+                & h1{
+                    font-size: 25px;
+                }
+            }
+            @media (max-width:422px) {
+                & h4{
+                    font-size: 25px;
+                }
+                & h1{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .landing canvas{
+        position: absolute;
+        z-index: 1;
+    }
+
